@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+
+@media (min-width: 768px) {
+  body {
+    background: url("../img/nebula.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+
+  .container {
+    padding: 30px 0 0 0; }
+
+  html, body, .container {
+    height: 100%; }
+
+  .nav {
+    -webkit-transform: rotate(-8deg);
+    -moz-transform: rotate(-8deg); }
+    .nav h1 {
+      font-family: 'SilkscreenNormal';
+      font-size: 6.5em;
+      color: rgba(17, 12, 34, 0.8); }
+    .nav ul {
+      background-color: rgba(0, 0, 0, 0.5);
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      width: 100%; }
+      .nav ul li {
+        display: inline;
+        padding: 0 50px;
+        font-size: 30px;
+        line-height: 50px;
+        font-family: 'SilkscreenNormal'; }
+        .nav ul li a {
+          color: rgba(255, 255, 255, 0.7);
+          text-decoration: none; }
+        .nav ul li a:hover {
+          color: white; }
+      .nav ul li:last-child {
+        border-bottom: solid 10px white; }
+        .nav ul li:last-child a {
+          color: white; }
+
+  .content {
+    min-height: 75%;
+    margin: 120px auto;
+    color: white; } }
