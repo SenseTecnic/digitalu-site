@@ -1,33 +1,103 @@
+
+//Mixins, variables, etc. 
+@mixin shadow{
+  text-shadow:0 -1px 1px rgba(0,0,0,0.5);
+}
+
+//Common CSS
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
 
+html, body, .container{
+   height: 100%;
+}
 
-@mixin shadow{
-  text-shadow:0 -1px 1px rgba(0,0,0,0.5);
+body { 
+    background: url('../img/nebula.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+//Landscape phones and down 
+@media (max-width: 480px) { 
+  
+   .nav {
+      -webkit-transform: rotate(-5deg); 
+      -moz-transform: rotate(-5deg); 
+      margin-top: -15px !important;
+      margin-left: -15px !important;
+      
+      h1 {    
+        font-family: 'SilkscreenNormal';
+        font-size: 35px;
+        color: rgba(17, 12, 34, 0.8);
+        text-shadow:0 1px 0 rgba(255,255,255,0.5);
+        margin: 0 0;
+      }    
+      
+       ul {
+        background-color: rgba(0,0,0,0.5);
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        margin-left: -10px;
+        width: 100%;
+        
+          li {
+             padding: 0 10px;             
+             display: inline;
+             font-family: 'SilkscreenNormal';
+             font-size: 20px;
+             line-height: 30px;
+             
+             a{
+                color: rgba(255, 255, 255, 0.7);
+                text-decoration: none;
+                padding: 0;
+                margin: 0;                
+              }
+          }
+        
+        li:first-child{
+          margin-left: 10px;
+        }
+        li.active{          
+             border-bottom: solid 5px white;
+        }
+      }
+  }
+  
+  .content{
+    margin-top: 60px;
+    font-color: white;
+    width: 400px;
+    
+    h1, h2 {
+       text-align: center;
+    } 
+    h1 {
+      
+    }
+    
+  }
 }
 
 
 // DESKTOP
 @media (min-width: 768px) {
   
-  body { 
-    background: url('../img/nebula.jpg') no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
+  
     
   .container {
     padding: 30px 0 0 0;
     
   }
   
-  html, body, .container{
-    height: 100%;
-  }
+ 
   
   .nav {
     -webkit-transform: rotate(-8deg); 
@@ -38,6 +108,7 @@
       font-family: 'SilkscreenNormal';
       font-size: 6.5em;
       color: rgba(17, 12, 34, 0.8);
+      text-shadow:0 1px 0 rgba(255,255,255,0.5);
     }
     
     ul {
@@ -66,7 +137,7 @@
         }
       }
       
-      li:last-child{
+      li.active{
         border-bottom: solid 10px white;
         a {
          color: white; 
@@ -80,7 +151,6 @@
     min-height: 75%;    
     margin: 120px auto;
     color: white;
-    width: 80%;
     
     h1, h2 {
        text-align: center;
