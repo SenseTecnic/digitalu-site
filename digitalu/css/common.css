@@ -18,7 +18,8 @@
 
   .nav {
     -webkit-transform: rotate(-8deg);
-    -moz-transform: rotate(-8deg); }
+    -moz-transform: rotate(-8deg);
+    margin-left: -35px !important; }
     .nav h1 {
       font-family: 'SilkscreenNormal';
       font-size: 6.5em;
@@ -48,4 +49,7 @@
   .content {
     min-height: 75%;
     margin: 120px auto;
-    color: white; } }
+    color: white;
+    width: 80%; }
+    .content h1, .content h2 {
+      text-align: center; } }

@@ -4,6 +4,11 @@
 }
 
 
+@mixin shadow{
+  text-shadow:0 -1px 1px rgba(0,0,0,0.5);
+}
+
+
 // DESKTOP
 @media (min-width: 768px) {
   
@@ -27,6 +32,7 @@
   .nav {
     -webkit-transform: rotate(-8deg); 
     -moz-transform: rotate(-8deg);  
+    margin-left: -35px !important;
     
     h1 {    
       font-family: 'SilkscreenNormal';
@@ -74,7 +80,15 @@
     min-height: 75%;    
     margin: 120px auto;
     color: white;
+    width: 80%;
+    
+    h1, h2 {
+       text-align: center;
+    } 
   }
   
 }
+
+
+
 
