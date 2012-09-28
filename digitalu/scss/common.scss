@@ -14,21 +14,19 @@ html, body, .container{
    height: 100%;
 }
 
-body { 
-    background: url('../img/nebula.jpg') no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
+
 
 //Landscape phones and down 
 @media (max-width: 480px) { 
   
+    body{
+       background: url('../img/nebula.jpg') no-repeat top center fixed;
+    }
+    
    .nav {
       -webkit-transform: rotate(-5deg); 
       -moz-transform: rotate(-5deg); 
-      margin-top: -15px !important;
+      margin-top: 10px;
       margin-left: -15px !important;
       
       h1 {    
@@ -45,13 +43,12 @@ body {
         padding: 0;
         margin: 0;
         margin-left: -10px;
-        width: 100%;
-        
+        width: 115%;
           li {
              padding: 0 10px;             
              display: inline;
              font-family: 'SilkscreenNormal';
-             font-size: 20px;
+             font-size: 18px;
              line-height: 30px;
              
              a{
@@ -66,20 +63,22 @@ body {
           margin-left: 10px;
         }
         li.active{          
-             border-bottom: solid 5px white;
+             border-bottom: solid 6px white;
         }
       }
   }
   
   .content{
-    margin-top: 60px;
-    font-color: white;
-    width: 400px;
+    margin-top: 10px;
+    color: white;
+     text-shadow:0 -1px 1px rgba(0,0,0,0.5);
     
     h1, h2 {
        text-align: center;
     } 
-    h1 {
+    h2 {
+      font-size: 20px;
+      line-height: 26px;
       
     }
     
@@ -88,8 +87,14 @@ body {
 
 
 // DESKTOP
-@media (min-width: 768px) {
-  
+@media (min-width: 481px) {
+  body { 
+      background: url('../img/nebula.jpg') no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+  }
   
     
   .container {
