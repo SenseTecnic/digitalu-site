@@ -5,6 +5,9 @@
 html, body, .container {
   height: 100%; }
 
+.container {
+  background-color: rgba(0, 0, 0, 0.3); }
+
 @media (max-width: 480px) {
   body {
     background: url("../img/nebula.jpg") no-repeat top center fixed; }
@@ -61,18 +64,24 @@ html, body, .container {
     background-size: cover; }
 
   .container {
-    padding: 30px 0 0 0; }
+    padding: 30px 0 0 0;
+    overflow-x: hidden; }
 
   .nav {
     -webkit-transform: rotate(-8deg);
     -moz-transform: rotate(-8deg);
-    margin-left: -35px !important; }
+    margin-left: -15px !important;
+    width: 115%; }
     .nav h1 {
+      margin-left: 35px;
+      margin-bottom: 15px;
       font-family: 'SilkscreenNormal';
       font-size: 6.5em;
       color: rgba(17, 12, 34, 0.8);
       text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); }
     .nav ul {
+      border-top: double 2px rgba(255, 255, 255, 0.9);
+      border-bottom: double 2px rgba(255, 255, 255, 0.9);
       background-color: rgba(0, 0, 0, 0.5);
       list-style-type: none;
       padding: 0;
@@ -90,13 +99,13 @@ html, body, .container {
         .nav ul li a:hover {
           color: white; }
       .nav ul li.active {
-        border-bottom: solid 10px white; }
+        border-bottom: solid 11px white; }
         .nav ul li.active a {
           color: white; }
 
   .content {
     min-height: 75%;
-    margin: 120px auto;
+    margin-top: 90px;
     color: white; }
     .content h1, .content h2 {
       text-align: center; } }

@@ -15,12 +15,19 @@ html, body, .container{
 }
 
 
+.container{
+  background-color: rgba(0,0,0,0.3);
+    
+}
+
+
 
 //Landscape phones and down 
 @media (max-width: 480px) { 
   
     body{
        background: url('../img/nebula.jpg') no-repeat top center fixed;
+       
     }
     
    .nav {
@@ -68,10 +75,11 @@ html, body, .container{
       }
   }
   
+  
   .content{
     margin-top: 10px;
     color: white;
-     text-shadow:0 -1px 1px rgba(0,0,0,0.5);
+    text-shadow:0 -1px 1px rgba(0,0,0,0.5);
     
     h1, h2 {
        text-align: center;
@@ -88,6 +96,7 @@ html, body, .container{
 
 // DESKTOP
 @media (min-width: 481px) {
+  
   body { 
       background: url('../img/nebula.jpg') no-repeat center center fixed; 
       -webkit-background-size: cover;
@@ -99,17 +108,20 @@ html, body, .container{
     
   .container {
     padding: 30px 0 0 0;
-    
+    overflow-x: hidden;
   }
   
  
   
   .nav {
     -webkit-transform: rotate(-8deg); 
-    -moz-transform: rotate(-8deg);  
-    margin-left: -35px !important;
+    -moz-transform: rotate(-8deg); 
+    margin-left: -15px !important;
+    width: 115%;
     
     h1 {    
+      margin-left: 35px;
+      margin-bottom: 15px;
       font-family: 'SilkscreenNormal';
       font-size: 6.5em;
       color: rgba(17, 12, 34, 0.8);
@@ -117,6 +129,9 @@ html, body, .container{
     }
     
     ul {
+      
+      border-top: double 2px rgba(255, 255, 255, 0.9);
+      border-bottom: double 2px rgba(255, 255, 255, 0.9);
       background-color: rgba(0,0,0,0.5);
       list-style-type: none;
       padding: 0;
@@ -143,7 +158,7 @@ html, body, .container{
       }
       
       li.active{
-        border-bottom: solid 10px white;
+        border-bottom: solid 11px white;
         a {
          color: white; 
         }  
@@ -154,7 +169,7 @@ html, body, .container{
   
   .content{
     min-height: 75%;    
-    margin: 120px auto;
+    margin-top: 90px;
     color: white;
     
     h1, h2 {
