@@ -1,8 +1,8 @@
 $(document).ready( function(){
 	
-	if (isTouchDevice()){
-		initSlider();
-	}
+//	if (isTouchDevice()){
+//		initSlider();
+//	}
 	
 	$('.content').load('templates/what.html');
 	$('#nav-what').addClass('active');
