@@ -1,10 +1,16 @@
+//TODO - remove after dev
+$.ajaxSetup ({
+    // Disable caching of AJAX responses
+    cache: false
+});
+
 $(document).ready( function(){
 	
 	if (isTouchDevice()){
 		initSlider();
 	}
 	
-	$('.content').load('templates/what.html');
+	//$('.content').load('templates/what.html');
 	$('#nav-what').addClass('active');
 	
 });
@@ -12,10 +18,16 @@ $(document).ready( function(){
 
 
 $('.nav-link').live('click', function(){
+	
+	var activeID = $('.active').attr('id').split('-');
+	activeID = activeID[1];	
 	$('.active').removeClass('active');
+	$('#' + activeID).hide();	
+	
 	var id = $(this).parent().addClass('active').attr('id').split('-');
 	id = id[1];
-	$('.content').load('templates/' + id + '.html');	
+	$('#' + id).show();
+	//$('.content').load('templates/' + id + '.html');	
 });
 
 // Detects if the phone is a touch device
@@ -25,9 +37,8 @@ function isTouchDevice() {
 
 function initSlider(){
 	
-	alert("Loading slider...");
 	//Load the Javascript file
 	$.getScript('lib/swipe.min.js', function() {
-        alert("Script loaded!");
-    });	
+		//callback
+	});	
 }

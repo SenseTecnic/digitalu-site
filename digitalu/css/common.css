@@ -8,6 +8,13 @@ html, body, .container {
 .pixel {
   font-family: 'SilkscreenNormal'; }
 
+a, a:active, a:visited {
+  color: #ff0097;
+  font-weight: bold; }
+
+a:hover {
+  color: #ff0097; }
+
 @media (max-width: 480px) {
   body {
     background: url("../img/nebula.jpg") no-repeat top center fixed;
@@ -81,7 +88,8 @@ html, body, .container {
       text-align: center; }
     .content h2 {
       font-size: 20px;
-      line-height: 26px; } }
+      line-height: 26px;
+      margin-top: 1.2em; } }
 @media (min-width: 481px) {
   body {
     background: url("../img/nebula.jpg") no-repeat center center fixed;
@@ -93,7 +101,8 @@ html, body, .container {
   .container {
     padding: 30px 0 0 0;
     overflow-x: hidden;
-    background-color: rgba(0, 0, 0, 0.3); }
+    background-color: rgba(0, 0, 0, 0.3);
+    overflow-y: hidden; }
 
   .nav {
     -webkit-transform: rotate(-8deg);
@@ -130,12 +139,30 @@ html, body, .container {
         .nav ul li.active a {
           color: white; }
 
+  .content-wrapper {
+    height: 100%;
+    overflow-y: auto; }
+
   .content {
     min-height: 75%;
-    margin-top: 90px;
+    margin-top: 70px;
     color: white; }
     .content h1 {
       font-size: 120px;
       padding: 8px; }
+    .content .secondary {
+      margin-top: 1.2em; }
     .content h1, .content h2 {
       text-align: center; } }
+::-webkit-scrollbar {
+  width: 12px; }
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.2); }
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4); }
