@@ -5,7 +5,7 @@ $.ajaxSetup ({
 });
 
 $(document).ready( function(){
-	 $.backstretch('img/nebula.jpg');
+	 $.backstretch('img/nebula_mobile.jpg');
 	 
 	if (isTouchDevice()){
 		initSlider();
