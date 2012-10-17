@@ -20,8 +20,6 @@ a:hover {
     width: 6px; }
 
   body {
-    background: black url("../img/nebula_mobile.jpg") no-repeat top center scroll;
-    background-size: auto 210%;
     padding: 0;
     overflow-x: hidden; }
 
