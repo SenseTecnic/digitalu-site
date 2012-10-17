@@ -44,13 +44,10 @@ a:hover{
    
   
     body{
-       // background: black url('../img/nebula_mobile.jpg') no-repeat top center scroll;
-       // -webkit-background-size:cover;
-      // -moz-background-size:cover;
-        // background-size:cover;
+       background: black url('../img/nebula.jpg') no-repeat top center scroll;
+       background-size: auto 215%;
        padding: 0;
-       overflow-x: hidden;
-       
+       overflow-x: hidden;       
     }
     
     .content-ul{
@@ -68,7 +65,6 @@ a:hover{
       padding: 0px 20px 0px 20px;
       margin-top: 10px;
       margin-left: -15px;
-      background: inherit;
       z-index: 10;
       height: 50px;
       
@@ -76,7 +72,7 @@ a:hover{
         font-family: 'SilkscreenNormal';
         font-size: 35px;
         color: rgba(17, 12, 34, 0.8);
-        text-shadow:0 1px 0 rgba(255,255,255,0.5);
+        text-shadow:0 1px 0 rgba(255,255,255,0.1);
         margin: 0 0;
       }  
       
@@ -158,19 +154,24 @@ a:hover{
 // DESKTOP
 @media (min-width: 551px) {
 
-  
+  body{
+    background: black url('../img/nebula.jpg') no-repeat top center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;  
+
+  }
     
   .container {
     padding: 30px 0 0 0;
     overflow-x: hidden;
     background-color: rgba(0,0,0,0.3);
-    overflow-y: scroll;
   }
   
  
   
   .nav {
-    -webkit-transform: rotate(-8deg); 
+    -webkit-transform: rotate(-8denebula_mobileg); 
     -moz-transform: rotate(-8deg); 
     margin-left: -15px !important;
     width: 115%;
@@ -225,7 +226,6 @@ a:hover{
   
   .content-wrapper{    
     height: 100%;    
-     overflow-y: auto;
   }
   
   .content{
