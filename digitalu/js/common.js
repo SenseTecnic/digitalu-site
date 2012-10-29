@@ -6,7 +6,6 @@ $.ajaxSetup ({
 
 $(document).ready( function(){
 
-	// $('.content').load('templates/what.html');
 	$('#nav-what').addClass('active');
 	
 });
@@ -23,5 +22,4 @@ $('.nav-link').live('click', function(){
 	var id = $(this).parent().addClass('active').attr('id').split('-');
 	id = id[1];
 	$('#' + id).show();
-	// $('.content').load('templates/' + id + '.html');
 });
