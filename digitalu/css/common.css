@@ -21,9 +21,24 @@ a, a:active, a:visited {
 
 a:hover {
 	text-decoration: underline;
-	color:white;
-	font-weight: bold;
+	color: white;
+	font-family: 'DroidSansBold', Helvetica, Arial, sans-serif;
+	font-weight: normal;
 }
+
+body {
+	font-family: 'DroidSansRegular', Helvetica, Arial, sans-serif;
+}
+
+b {
+	font-family: 'DroidSansBold', Helvetica, Arial, sans-serif;
+	font-weight: normal;
+}
+
+p {
+	margin: 20px 0;
+}
+
 
 /* ---------------------------------- */
 /* MOBILE							  */
@@ -75,14 +90,6 @@ a:hover {
 		width: 115%;
 	}
 	.nav ul li {
-Win cool prizes by proposing a new mobile app or service that could dramatically enhance the UBC experience. It can be for fun, function or achieving UBC’s global mission. What kind of mobile app would make UBC a much better place for you?
-
-a pocket sustainability dashboard?
-discovering new study partners?
-flash-mob recreational events?
-social media hot maps?
-When?
-The inaugural Digital*U Contest runs from October 15, 2012 to January 15, 2013. We're looking for creative individuals and groups on campus to champion innovative ideas. The best ideas will find their way into labs, design studios, hackathons and - yes - into reality!
 		padding: 0 10px;
 		display: inline;
 		font-family: 'SilkscreenNormal';
@@ -95,6 +102,10 @@ The inaugural Digital*U Contest runs from October 15, 2012 to January 15, 2013. 
 		padding: 0;
 		margin: 0;
 	}
+	
+	
+	
+	
 	.nav ul li:first-child {
 		margin-left: 10px;
 	}
@@ -127,14 +138,6 @@ The inaugural Digital*U Contest runs from October 15, 2012 to January 15, 2013. 
 		padding: 5px;
 	}
 	.content h1, .content h2 {
-Win cool prizes by proposing a new mobile app or service that could dramatically enhance the UBC experience. It can be for fun, function or achieving UBC’s global mission. What kind of mobile app would make UBC a much better place for you?
-
-a pocket sustainability dashboard?
-discovering new study partners?
-flash-mob recreational events?
-social media hot maps?
-When?
-The inaugural Digital*U Contest runs from October 15, 2012 to January 15, 2013. We're looking for creative individuals and groups on campus to champion innovative ideas. The best ideas will find their way into labs, design studios, hackathons and - yes - into reality!
 		text-align: center;
 	}
 	.content h2 {
@@ -155,6 +158,13 @@ The inaugural Digital*U Contest runs from October 15, 2012 to January 15, 2013. 
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 	}
+	
+	#it-logo{
+		position: fixed;
+		bottom: 10px;
+		right: 10px;
+		opacity: 0.5;
+	}
 
 	.container {
 		padding: 30px 0 0 0;
@@ -167,12 +177,17 @@ The inaugural Digital*U Contest runs from October 15, 2012 to January 15, 2013. 
 	}
 
 	.prize-message {
-		padding: 50px 0;
+		padding: 50px 0 20px 0;
 	}
 
 	.prize-message h1 {
 		font-size: 50px;
 	}
+	
+	.block {
+		margin-top: 75px;
+	}
+	
 
 	/* NAVBAR */
 	h1.title {
@@ -212,6 +227,8 @@ The inaugural Digital*U Contest runs from October 15, 2012 to January 15, 2013. 
 
 	.nav ul li a:hover {
 		color: white;
+		font-family: 'SilkscreenNormal';
+		font-weight: bold;
 	}
 
 	.nav ul li.active {
@@ -242,16 +259,16 @@ The inaugural Digital*U Contest runs from October 15, 2012 to January 15, 2013. 
 		margin: 0;
 		padding: 0;
 	}
-	
+
 	#faq-ul li:first-child {
 		margin-top: 0;
 		border-top: 0;
 	}
-	
+
 	#faq-ul li:last-child {
 		margin-bottom: 0;
 	}
-	
+
 	#faq-ul li {
 		margin: 50px 0;
 		border-top: solid 1px rgba(255, 255, 255, 0.3);
