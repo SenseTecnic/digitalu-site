@@ -7,6 +7,7 @@ $.ajaxSetup ({
 $(document).ready( function(){
 
 	$('#nav-what').addClass('active');
+	truncateText();
 	
 });
 
@@ -22,4 +23,15 @@ $('.nav-link').live('click', function(){
 	var id = $(this).parent().addClass('active').attr('id').split('-');
 	id = id[1];
 	$('#' + id).show();
+});
+
+function truncateText(){
+	if ($(window).width() < 500)
+		$("#nav-register").find('a').text("Reg.");
+	else 
+		$("#nav-register").find('a').text("Register");
+}
+
+$(window).resize(function() {
+	truncateText();
 });

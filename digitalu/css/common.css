@@ -57,11 +57,13 @@ h1, h2, h3 {
 /* ---------------------------------- */
 /* MOBILE							  */
 /* ---------------------------------- */
-@media (max-width: 550px) {
+@media (max-width: 779px) {
 
 	body {
-		background: black url("../img/nebula.jpg") no-repeat top center scroll;
-		background-size: auto 215%;
+		background: black url("../img/nebula.jpg") no-repeat top center fixed;
+		background-size: cover;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
 		padding: 0;
 	}
 
@@ -71,7 +73,8 @@ h1, h2, h3 {
 	}
 
 	.content {
-		padding: 15px;
+		margin: 0 15px 0 15px;
+		padding: 10px;
 	}
 
 	.content h1, .content h2 {
@@ -83,7 +86,7 @@ h1, h2, h3 {
 		margin-top: 1.2em;
 	}
 	.block {
-		margin-top: 20px;
+		margin-top: 40px;
 	}
 
 	h1.title {
@@ -91,11 +94,19 @@ h1, h2, h3 {
 	}
 
 	h3.subtitle {
-		line-height: 30px;
+		padding: 10px;
+		font-size: 15px;
+		line-height: 20px;
 	}
+	
+	.nav ul li{
+		padding-top: 10px;
+	}
+	
+
 }
 
-@media (min-width: 551px) {
+@media (min-width: 780px) {
 
 	body {
 		background: black url("../img/nebula.jpg") no-repeat top center fixed;
@@ -135,8 +146,7 @@ h1, h2, h3 {
 
 	.nav ul li {
 		font-size: 28px;
-		line-height: 28px;
-		width: 18%;
+		line-height: 28px;		
 	}
 
 }
@@ -169,6 +179,7 @@ h3.subtitle {
 .nav ul li {
 	display: inline-block;
 	font-family: 'SilkscreenNormal';
+	width: 18%;
 }
 
 .nav ul li a {
