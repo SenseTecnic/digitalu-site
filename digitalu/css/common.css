@@ -23,7 +23,6 @@ a:hover {
 	color: #ff0097;
 }
 
-
 /* ---------------------------------- */
 /* MOBILE							  */
 /* ---------------------------------- */
@@ -42,7 +41,7 @@ a:hover {
 		margin-left: -15px !important;
 		width: 115%;
 	}
-	
+
 	.content-ul {
 		margin-left: 5px;
 	}
@@ -127,14 +126,11 @@ a:hover {
 	}
 }
 
-
-
-
 /* ---------------------------------- */
 /* DESKTOP							  */
 /* ---------------------------------- */
 @media (min-width: 551px) {
-	
+
 	body {
 		background: black url("../img/nebula.jpg") no-repeat top center fixed;
 		background-size: cover;
@@ -146,19 +142,34 @@ a:hover {
 		padding: 30px 0 0 0;
 		max-width: 980px;
 	}
-	
-	
-	
+
+	h1, h2, h3 {
+		text-align: center;
+		font-family: 'SilkscreenNormal';
+	}
+
+	.prize-message {
+		padding: 50px 0;
+	}
+
+	.prize-message h1 {
+		font-size: 50px;
+	}
+
 	/* NAVBAR */
 	h1.title {
 		text-align: center;
-		padding: 40px 0;		
-		font-family: 'SilkscreenNormal';
+		padding: 40px 0 0 0;
 		font-size: 6.5em;
 		color: rgba(17, 12, 34, 0.8);
 	}
-	
-	
+
+	h3.subtitle {
+		text-align: center;
+		color: rgba(17, 12, 34, 0.7);
+		font-family: 'SilkscreenNormal';
+	}
+
 	.nav ul {
 		background-color: rgba(0, 0, 0, 0.5);
 		list-style-type: none;
@@ -167,7 +178,7 @@ a:hover {
 		width: 100%;
 		text-align: center;
 	}
-	
+
 	.nav ul li {
 		display: inline-block;
 		font-size: 30px;
@@ -175,48 +186,58 @@ a:hover {
 		line-height: 30px;
 		font-family: 'SilkscreenNormal';
 	}
-	
+
 	.nav ul li a {
 		color: rgba(255, 255, 255, 0.7);
 		text-decoration: none;
 	}
-	
+
 	.nav ul li a:hover {
 		color: white;
 	}
-	
+
 	.nav ul li.active {
 		border-bottom: solid 11px white;
 	}
-	
+
 	.nav ul li.active a {
 		color: white;
 	}
-	
-	
-	
+
 	/* CONTENT */
-	
-	.content{
-		padding: 10px;
-		color: white;		
+
+	.content {
+		padding: 30px;
+		color: white;
 		background-color: rgba(0, 0, 0, 0.5);
+		margin-bottom: 10px;
 	}
-	.content-ul{
+	.content-ul {
 		margin-left: 0px;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
+	/* FAQ */
+
+	ul#faq-ul {
+		list-style-type: none;
+	}
 	
+	#faq-ul li:first-child {
+		margin-top: 0;
+	}
+	
+	#faq-ul li:last-child {
+		margin-bottom: 0;
+	}
+	
+	#faq-ul li {
+		margin: 40px 0;
+	}
+
+	#faq-ul h3 {
+		text-align: left;
+		line-height: 30px;
+		margin-bottom: 0;
+	}
+
 }
