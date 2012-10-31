@@ -16,8 +16,8 @@ $('#add-member').live('click', function(){
 	
 	var numMembers = $('#num-members').val();
 	
-	var memberFormItem = '<div class="control-group"><label class="control-label" for="inputPassword">Team member #' + ++numMembers + '</label><div class="controls"><input type="text" id="inputPassword" placeholder="Name"><input type="text" id="inputEmail" placeholder="Email"></div> </div>';
-	$('.member-group').append(memberFormItem);
+	var memberFormItem = '<div class="control-group member-group"><label class="control-label" for="inputPassword">Team member #' + ++numMembers + '</label><div class="controls"><input type="text" id="inputPassword" placeholder="Name"><input type="text" id="inputEmail" placeholder="Email"></div> </div>';
+	$('.member-group-wrapper').append(memberFormItem);
 	$('#num-members').val(numMembers);
 	return false;
 });
@@ -37,10 +37,17 @@ $('.nav-link').live('click', function(){
 });
 
 function truncateText(){
-	if ($(window).width() < 500)
+	if ($(window).width() < 500){
 		$("#nav-register").find('a').text("Reg.");
-	else 
+		$('#form-message-mobile').show();
+		$('#registration-form').hide();
+	}
+		
+	else {
 		$("#nav-register").find('a').text("Register");
+		$('#form-message-mobile').hide();
+		$('#registration-form').show();
+	}
 }
 
 $(window).resize(function() {

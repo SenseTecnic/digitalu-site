@@ -165,8 +165,8 @@ h1, h2, h3 {
 		opacity: 0.5;
 		z-index: 1;
 	}
-	
-	#it-logo:hover{
+
+	#it-logo:hover {
 		opacity: 0.7;
 	}
 
@@ -187,7 +187,6 @@ h3.subtitle {
 	color: rgba(17, 12, 34, 0.7);
 	font-family: 'SilkscreenNormal';
 }
-
 
 .nav ul {
 	background-color: rgba(0, 0, 0, 0.5);
@@ -236,26 +235,89 @@ h3.subtitle {
 
 /* REGISTRATION FORM */
 #registration-form {
-	
-
-	
+	margin: 5%;
 }
 
-#registration-form input, #registration-form label{
-	font-size: 1.2em;
+#registration-form .control-group, .member-group-wrapper{
+	padding: 15px 0;
+}
+
+#registration-form input {
+	background-color: transparent;
+	border-style: solid;
+	border-width: 0px 0px 2px 0px;
+	border-color: darkmagenta;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	color: white;
+}
+
+#registration-form input:focus {
+	border-color: deeppink;
+	box-shadow: none;
+}
+
+#registration-form textarea {
+	resize: vertical;
+}
+
+#registration-form label {
+	font-family: 'SilkscreenNormal', 'DroidSansRegular', Helvetica, Arial, sans-serif;
+	font-size: 1em;
+}
+
+#registration-form input{
+
 	height: 1.75em;
 	padding: 10px;
 }
 
-#registration-form #add-member{
+.member-group{
+	margin: 5px !important;
+}
+
+#registration-form .member-group {
+	width: 100%;
+}
+
+#registration-form .member-group input {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	margin: 0;
+	width: 49%;
+}
+
+input::-webkit-input-placeholder {
+	color: rgba(255, 255, 255, 0.7);
+}
+
+input:-moz-placeholder {
+	color: rgba(255, 255, 255, 0.7);
+}
+
+#registration-form .help-block, #registration-form .help-block a {
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 0.9em;
+}
+
+#registration-form textarea, #registration-form input#teamName {
+	width: 100%;
+}
+
+#registration-form #add-member {
 	float: right;
-}
-
-#registration-form .form-buttons{
-	text-align: center;
+	margin-top: -25px;
 }
 
 
+
+#registration-form #disclaimer {
+	font-family: 'DroidSansRegular', Helvetica, Arial, sans-serif;
+	font-size: 0.9em;
+	color: rgba(255, 255, 255, 0.7);
+	cursor: pointer;
+}
 
 /* FAQ */
 ul#faq-ul {
