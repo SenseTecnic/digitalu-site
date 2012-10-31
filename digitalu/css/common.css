@@ -165,6 +165,10 @@ h1, h2, h3 {
 		opacity: 0.5;
 		z-index: 1;
 	}
+	
+	#it-logo:hover{
+		opacity: 0.7;
+	}
 
 	#faq-ul h3 {
 		line-height: 30px;
@@ -183,6 +187,7 @@ h3.subtitle {
 	color: rgba(17, 12, 34, 0.7);
 	font-family: 'SilkscreenNormal';
 }
+
 
 .nav ul {
 	background-color: rgba(0, 0, 0, 0.5);
@@ -229,8 +234,30 @@ h3.subtitle {
 	list-style-type: none;
 }
 
-/* FAQ */
+/* REGISTRATION FORM */
+#registration-form {
+	
 
+	
+}
+
+#registration-form input, #registration-form label{
+	font-size: 1.2em;
+	height: 1.75em;
+	padding: 10px;
+}
+
+#registration-form #add-member{
+	float: right;
+}
+
+#registration-form .form-buttons{
+	text-align: center;
+}
+
+
+
+/* FAQ */
 ul#faq-ul {
 	list-style-type: none;
 	margin: 0;

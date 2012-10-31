@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Digital*U</title>
+        <title>UBC Digital*U</title>
 
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="HandheldFriendly" content="true" />
@@ -46,7 +46,7 @@
 
             <div class="content">
                 <ul class="content-ul">
-                    <li id="what" style="display:block">
+                    <li id="what" style="display:none">
 
                         <div class="prize-message">
                             <h3 class="pixel">Help us invent UBC’s digital future for a chance to win</h3>
@@ -93,7 +93,7 @@
                         <div class="block">
                             <h2 class="pixel secondary">How to enter</h2>
                             <p>
-                                Email us at <a href="mailto:digitalu@magic.ubc.ca">digitalu@magic.ubc.ca</a> by <b>October 31, 2012</b> to register your team.  Your email should include:
+                                Email us at <a href="mailto:digitalu@magic.ubc.ca">digitalu@magic.ubc.ca</a> to register your team.  Your email should include:
                             </p>
                             <ul>
                                 <li>
@@ -109,10 +109,6 @@
                                     Any initial questions or requests
                                 </li>
                             </ul>
-
-                            <p>
-                                Teams may also register after October 31, 2012, but may then miss access to contest updates and events as well as design, technical and media support.
-                            </p>
                         </div>
                         <div class="block">
                             <h2 class="pixel secondary">Final submission</h2>
@@ -165,8 +161,8 @@
                             <li>
                                 <h3>Will my ideas really make a difference?</h3>
                                 <p>
-                                    This contest gives you the opportunity to create something that literally thousands of students, staff and faculty here 
-                                    at UBC could use on a daily basis. Let your ideas run wild and you could create the next digital revolution.  
+                                    This contest gives you the opportunity to create something that literally thousands of students, staff and faculty here
+                                    at UBC could use on a daily basis. Let your ideas run wild and you could create the next digital revolution.
                                     Some of the world's most successful businesses started with a simple idea piloted on a university campus -- ever heard of Facebook?
                                 </p>
                             </li>
@@ -174,8 +170,8 @@
                             <li>
                                 <h3>What kinds of ideas are you looking for?</h3>
                                 <p>
-                                    We're looking for a new mobile app or service that could dramatically enhance the UBC experience.  
-                                    This could take on many forms and the topic is purposely broad.  To help you get started, you may want 
+                                    We're looking for a new mobile app or service that could dramatically enhance the UBC experience.
+                                    This could take on many forms and the topic is purposely broad.  To help you get started, you may want
                                     to review UBC's mission statements on the university website or view our sample submissions.
                                 </p>
                             </li>
@@ -183,7 +179,7 @@
                             <li>
                                 <h3>How do I enter?</h3>
                                 <p>
-                                    First of all, make sure that you've read the contest rules, regulations and entry instructions. 
+                                    First of all, make sure that you've read the contest rules, regulations and entry instructions.
                                     Register your team by filing out the registration form. We'll be in touch with you shortly afterwards.
                                 </p>
                             </li>
@@ -191,8 +187,8 @@
                             <li>
                                 <h3>What kinds of resources are available to me?</h3>
                                 <p>
-                                    If you have specific needs, please email us.  We will be hosting a hackathon on December ??, providing a space to work, 
-                                    internet access, web servers and technical assistance for programming projects.  All entrants are welcome to drop in for a chat, 
+                                    If you have specific needs, please email us.  We will be hosting a hackathon on December ??, providing a space to work,
+                                    internet access, web servers and technical assistance for programming projects.  All entrants are welcome to drop in for a chat,
                                     whether or not they decide to stay and work.
                                 </p>
                             </li>
@@ -247,15 +243,93 @@
 
                     </li>
 
-                    <li id="register" style="display:none">
-                        <p>Registration form coming soon! In the meantime, you can contact us at <a href="mailto:digitalu@magic.ubc.ca">digitalu@magic.ubc.ca</a></p>
+                    <li id="register" style="display:block">
+                        <p>
+                            Registration form coming soon! If you'd like to register in the meantime, email us your submission at <a href="mailto:digitalu@magic.ubc.ca">digitalu@magic.ubc.ca</a>
+                        </p>
+
+                        <div class="row">
+                            <form id="registration-form" class="form-horizontal span7 offset1">
+
+                                <div class="control-group">
+                                    <label class="control-label" for="teamName">Team name</label>
+                                    <div class="controls">
+                                        <input type="text" id="teamName" placeholder="e.g. Team Awesome">
+                                    </div>
+                                </div>
+
+                                <div class="member-group">
+                                    <div class="control-group">
+                                        <label class="control-label" for="member-controls">Team member #1</label>
+                                        <div class="controls member-controls">
+                                            <input type="text" id="inputPassword" placeholder="Name">
+                                            <input type="text" id="inputEmail" placeholder="Email">
+                                        </div>
+                                    </div>                                    
+                                </div>
+
+                                <div id="add-member">
+                                    <a href="">+ Add another member</a>
+                                    <input id="num-members" type="hidden" value="1">
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label" for="inputDescription">Project description draft
+                                        <br/>
+                                        <span class="form-smalltext">(300 words maximum)</span> </label>
+
+                                    <div class="controls">
+                                        <textarea rows="3">                                        
+                                    </textarea>                                                                                                                                                                                                                                                                                                                                    
+                                    
+ <span class="help-block">Example block-level help text here.</span>
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label" for="inputDescription">Initial questions, comments or requests</label>
+
+                                    <div class="controls">
+                                        <textarea rows="3">                                        
+                                    </textarea>                                                                                                                                                                                                                                                                                                                                    
+                                    
+ <span class="help-block">Example block-level help text here.</span>
+                                    </div>
+                                </div>
+                                <div class="control-group  form-buttons">
+                                    <button type="reset" class="btn">
+                                        Start Over
+                                    </button>
+                                    <button type="submit" class="btn">
+                                        Submit
+                                    </button>
+                                </div>
+
+                            </form>
+                        </div>
                     </li>
 
                 </ul>
             </div>
         </div>
-        
-        <img src="img/it_logo.png" id="it-logo"/>
+
+        <a href="http://www.it.ubc.ca/"><img src="img/it_logo.png" id="it-logo"/></a>
+
+        <!-- Google Analytics -->
+        <script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-36010410-1']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script');
+				ga.type = 'text/javascript';
+				ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(ga, s);
+			})();
+        </script>
 
         <script src="http://code.jquery.com/jquery-latest.js"></script>
         <script src="js/common.js"></script>
