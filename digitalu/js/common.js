@@ -14,10 +14,21 @@ $(document).ready( function(){
 
 $('#add-member').live('click', function(){
 	
-	var numMembers = $('#num-members').val();
+	var numMembers = parseInt($('#num-members').val()) + 1;
 	
-	var memberFormItem = '<div class="control-group member-group"><label class="control-label" for="inputPassword">Team member #' + ++numMembers + '</label><div class="controls"><input type="text" id="inputPassword" placeholder="Name"><input type="text" id="inputEmail" placeholder="Email"></div> </div>';
-	$('.member-group-wrapper').append(memberFormItem);
+	
+	var memberItemString =  ['<div class="control-group member-group">',
+	                         '<label class="control-label" for="member-controls">Team member #' + numMembers + '</label>',
+	                         '<div class="controls member-controls">',
+	                         '<div class="member-name-wrapper">',
+	                         '<input type="text" class="input-name" name="inputName-' + numMembers + '" placeholder="Name"></div>',
+	                         '<div class="member-email-wrapper">',
+	                         '<input type="text" class="input-email" name="inputEmail-'+ numMembers +'" placeholder="Email"></div>',
+	                         '</div></div>'      
+	                        ].join('\n');
+	
+	//var memberFormItem = '<div class="control-group member-group"><label class="control-label" for="inputPassword">Team member #' + ++numMembers + '</label><div class="controls"><input type="text" id="inputPassword" placeholder="Name"><input type="text" id="inputEmail" placeholder="Email"></div> </div>';
+	$('.member-group-wrapper').append(memberItemString);
 	$('#num-members').val(numMembers);
 	return false;
 });

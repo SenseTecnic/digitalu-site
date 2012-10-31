@@ -76,7 +76,7 @@ h1, h2, h3 {
 	}
 
 	.content h2 {
-		font-size: 20px;
+		font-size: 18px;
 		line-height: 26px;
 		margin-top: 1.2em;
 	}
@@ -154,7 +154,7 @@ h1, h2, h3 {
 	}
 
 	.nav ul li {
-		font-size: 28px;
+		font-size: 25px;
 		line-height: 28px;
 	}
 
@@ -233,6 +233,38 @@ h3.subtitle {
 	list-style-type: none;
 }
 
+.judges-ul{
+	list-style-type: none;
+}
+
+ul.judges-ul li:nth-child(odd) img{
+	float: left;
+	margin-right: 20px;
+
+} 
+
+ul.judges-ul li:nth-child(even) img{
+	float: right;
+	margin-left: 20px;
+} 
+
+ul.judges-ul li:nth-child(even) .judge-info{
+	text-align: right;
+}
+
+.judge-block img{
+	height: 120px;
+	width: 120px;
+	border-radius: 60px;
+	-moz-border-radius: 60px;
+	}
+
+.judge-info{
+	height: 160px;
+}
+
+
+
 /* REGISTRATION FORM */
 #registration-form {
 	margin: 5%;
@@ -242,15 +274,25 @@ h3.subtitle {
 	padding: 15px 0;
 }
 
+.proposal-group {
+	margin-top: 30px;
+}
+
 #registration-form input {
 	background-color: transparent;
 	border-style: solid;
 	border-width: 0px 0px 2px 0px;
 	border-color: darkmagenta;
 	border-top: none;
-	border-left: none;
 	border-right: none;
 	color: white;
+	box-shadow: none;
+	border-radius: 0px !important;
+	-webkit-border-radius: 0px !important;
+}
+
+#registration-form input.input-name, #registration-form input.input-email{
+	min-width: 250px;
 }
 
 #registration-form input:focus {
@@ -273,6 +315,15 @@ h3.subtitle {
 	padding: 10px;
 }
 
+#registration-form .member-name-wrapper{
+	padding-right: 10px;
+}
+#registration-form .member-name-wrapper, #registration-form .member-email-wrapper{
+	display: inline;
+	width: 50%;
+	float:left;
+}
+
 .member-group{
 	margin: 5px !important;
 }
@@ -285,7 +336,7 @@ h3.subtitle {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	margin: 0;
-	width: 49%;
+	width: 100%;
 }
 
 input::-webkit-input-placeholder {
@@ -309,7 +360,6 @@ input:-moz-placeholder {
 	float: right;
 	margin-top: -25px;
 }
-
 
 
 #registration-form #disclaimer {

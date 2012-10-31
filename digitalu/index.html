@@ -28,7 +28,7 @@
                         <a class="nav-link" href="#">What</a>
                     </li>
                     <li id="nav-how">
-                        <a class="nav-link" href="#" >How</a>
+                        <a class="nav-link" href="#" >Entries</a>
                     </li>
                     <li id="nav-rules">
                         <a class="nav-link" href="#">Rules</a>
@@ -69,8 +69,6 @@
                     </li>
 
                     <li id="how" style="display:none">
-
-                        <h2 class="pixel">Get your ideas and team together!</h2>
 
                         <p>
                             Final submissions will be judged equally on originality, feasibility, potential impact, and benefit to UBC, and will involve the following components:
@@ -119,7 +117,9 @@
                         </div>
                     </li>
 
-                    <li id="rules" style="display:none">
+                    <li id="rules" style="display:block">
+
+                        <h2 class="pixel">Judging Guidelines</h2>
                         <p>
                             The Digital*U Contest is open to all UBC campuses and communities, including students, alumni, staff, faculty, residents, departments, units, and facilities.
                             A maximum of two (2) entries will be considered from any individual or group. When entries of a substantially similar nature are encountered, precedence will be
@@ -153,6 +153,67 @@
                             Applicants may optionally choose to develop their ideas as their own ventures in conjuntion with the UBC MAGIC Lab
                             and/or within UBC programs such as entrepreneurship@UBC.
                         </p>
+
+                        <div class="block" style="display:none">
+                            <h2 class="pixel">Judging Committee</h2>
+                            <div class="row-fluid">
+                                <ul class="judges-ul span8 offset2">
+                                    <li class="judge-block">
+                                        <img src="img/judges/david.jpeg"/>
+                                        <div class="judge-info">
+                                            Dr. David Vogt
+                                            <br />
+                                            Director, Innovation Strategy, UBC MAGIC Lab
+                                            <br/>
+                                            Executive Director, Mobile Muse Network
+                                        </div>
+                                    </li>
+
+                                    <li class="judge-block">
+                                        <img src="img/judges/brad.jpg"/>
+                                        <div class="judge-info">
+                                            Brad Lowe
+                                            <br />
+                                            Wireless Accelerator Architect, Wavefront
+                                            <br/>
+                                            (formerly) Managing Director, NOKIA Canada Development Centre
+
+                                        </div>
+                                    </li>
+
+                                    <li class="judge-block">
+                                        <img src="img/judges/phil.png"/>
+                                        <div class="judge-info">
+                                            Phil Chatterton
+                                            <br />
+                                            Director, Digital Media Technologies, UBC IT
+
+                                        </div>
+                                    </li>
+
+                                    <li class="judge-block">
+                                        <img src="img/judges/janeen.jpg"/>
+                                        <div class="judge-info">
+                                            Janeen Alliston
+                                            <br />
+                                            Director, UBC Student Communications Services
+
+                                        </div>
+                                    </li>
+
+                                    <li class="judge-block">
+                                        <img src="img/judges/sara.jpg"/>
+                                        <div class="judge-info">
+                                            Sara Bainbridge
+                                            <br />
+                                            Student, Web developer, UBC MAGIC Lab
+
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
 
                     </li>
 
@@ -243,7 +304,9 @@
 
                     </li>
 
-                    <li id="register" style="display:block">
+                    <li id="register" style="display:none">
+
+                        <h2 class="pixel">Get your ideas and team together!</h2>
 
                         <div id="form-message-mobile">
                             <p>
@@ -251,9 +314,6 @@
                                 if you have any questions or concerns!
                             </p>
                         </div>
-                        <p>
-                            Registration form coming soon! If you'd like to register in the meantime, email us your submission at <a href="mailto:digitalu@magic.ubc.ca">digitalu@magic.ubc.ca</a>
-                        </p>
 
                         <div class="row">
                             <form id="registration-form" class="form-horizontal">
@@ -269,8 +329,13 @@
                                     <div class="control-group member-group">
                                         <label class="control-label" for="member-controls">Team member #1</label>
                                         <div class="controls member-controls">
-                                            <input type="text" class="input-name" name="inputName-1" placeholder="Name">
-                                            <input type="text" class="input-email" name="inputEmail-1" placeholder="Email">
+                                            <div class="member-name-wrapper">
+                                                <input type="text" class="input-name" name="inputName-1" placeholder="Name">
+                                            </div>
+
+                                            <div class="member-email-wrapper">
+                                                <input type="text" class="input-email" name="inputEmail-1" placeholder="Email">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -280,11 +345,11 @@
                                     <input id="num-members" type="hidden" value="1">
                                 </div>
 
-                                <div class="control-group">
+                                <div class="control-group proposal-group">
                                     <label class="control-label" for="inputDescription">Project proposal</label>
 
                                     <div class="controls">
-                                        <textarea rows="3"></textarea>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                                        <textarea rows="3"></textarea>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
                                     
  <span class="help-block">Submit a brief draft <b>(maximum 300 words)</b> of your idea. This will be published in the gallery of entries, so any changes you want to make after submitting the form will have to be done by emailing us at <a href="mailto:digitalu@magic.ubc.ca">digitalu@magic.ubc.ca</a>.</span>
                                     </div>
@@ -294,7 +359,7 @@
                                     <label class="control-label" for="inputDescription">Questions or requests</label>
 
                                     <div class="controls">
-                                        <textarea rows="3"></textarea>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                                        <textarea rows="3"></textarea>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
                                     
  <span class="help-block">Let us know if you have any particular needs for your project.</span>
                                     </div>
