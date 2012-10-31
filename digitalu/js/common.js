@@ -53,6 +53,7 @@ function truncateText(){
 		$('#form-message-mobile').show();
 		$('#registration-form').hide();
 	}
+	
 		
 	else {
 		$("#nav-register").find('a').text("Register");

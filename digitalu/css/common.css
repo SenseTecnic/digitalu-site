@@ -291,9 +291,6 @@ ul.judges-ul li:nth-child(even) .judge-info{
 	-webkit-border-radius: 0px !important;
 }
 
-#registration-form input.input-name, #registration-form input.input-email{
-	min-width: 250px;
-}
 
 #registration-form input:focus {
 	border-color: deeppink;
@@ -358,6 +355,7 @@ input:-moz-placeholder {
 
 #registration-form #add-member {
 	float: right;
+	font-family: 'SilkscreenNormal', 'DroidSansRegular', Helvetica, Arial, sans-serif;
 	margin-top: -25px;
 }
 
