@@ -289,8 +289,14 @@ ul.judges-ul li:nth-child(even) .judge-info{
 	box-shadow: none;
 	border-radius: 0px !important;
 	-webkit-border-radius: 0px !important;
+	height: 1.75em !important;
+	padding: 10px;
+	
 }
 
+#registration-form input#projectName {
+	width: 100%;
+}
 
 #registration-form input:focus {
 	border-color: deeppink;
@@ -306,11 +312,6 @@ ul.judges-ul li:nth-child(even) .judge-info{
 	font-size: 1em;
 }
 
-#registration-form input{
-
-	height: 1.75em;
-	padding: 10px;
-}
 
 #registration-form .member-name-wrapper{
 	padding-right: 10px;
@@ -346,12 +347,27 @@ input:-moz-placeholder {
 
 #registration-form .help-block, #registration-form .help-block a {
 	color: rgba(255, 255, 255, 0.7);
-	font-size: 0.9em;
+	font-size: 0.9em;	
 }
 
 #registration-form textarea, #registration-form input#teamName {
 	width: 100%;
 }
+
+#registration-form #add-member a{	
+	color: rgba(255, 255, 255, 0.7);
+}
+
+#registration-form #add-member a:hover{	
+	color: rgba(255, 255, 255, 1);
+	text-decoration: none;
+}
+
+#inputDescription{
+	padding-bottom: 20px;
+	position: relative;
+}
+
 
 #registration-form #add-member {
 	float: right;
@@ -366,6 +382,31 @@ input:-moz-placeholder {
 	color: rgba(255, 255, 255, 0.7);
 	cursor: pointer;
 }
+
+#counter {
+	float:right;
+	color: #CCC;
+	margin-top: -10px;
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	
+}
+
+.form-buttons{
+	text-align: right;
+}
+.form-buttons button{
+	margin: 5px;
+	font-weight: bold;
+}
+
+.divider{
+	height: 1px;
+	background-color: rgba(255, 255, 255, 0.3);
+	margin: 50px 0;
+}
+
 
 /* FAQ */
 ul#faq-ul {
@@ -391,5 +432,6 @@ ul#faq-ul {
 #faq-ul h3 {
 	text-align: left;
 	margin-bottom: 0;
+	font-size: 1.2em;
 }
 

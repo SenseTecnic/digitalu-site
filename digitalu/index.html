@@ -28,7 +28,7 @@
                         <a class="nav-link" href="#">What</a>
                     </li>
                     <li id="nav-how">
-                        <a class="nav-link" href="#" >Entries</a>
+                        <a class="nav-link" href="#" >Gallery</a>
                     </li>
                     <li id="nav-rules">
                         <a class="nav-link" href="#">Rules</a>
@@ -46,7 +46,7 @@
 
             <div class="content">
                 <ul class="content-ul">
-                    <li id="what" style="display:block">
+                    <li id="what" style="display:none">
 
                         <div class="prize-message">
                             <h3 class="pixel">Help us invent UBC’s digital future for a chance to win</h3>
@@ -66,49 +66,80 @@
                                 The inaugural Digital*U Contest runs from October 15, 2012 to January 15, 2013.  Winners will be announced on or before February 10, 2013. The earlier you register, the better!
                             </p>
                         </div>
+
                     </li>
 
                     <li id="how" style="display:none">
                         <h2 class="pixel secondary">Submission Gallery</h2>
-
+                        <p>
+                            Come back later and check out the contest entries!
+                        </p>
                     </li>
 
                     <li id="rules" style="display:none">
 
-                        <h2 class="pixel">Judging Guidelines</h2>
+                        <h2 class="pixel secondary">Deliverables</h2>
+
                         <p>
-                            The Digital*U Contest is open to all UBC campuses and communities, including students, alumni, staff, faculty, residents, departments, units, and facilities.
-                            A maximum of two (2) entries will be considered from any individual or group. When entries of a substantially similar nature are encountered, precedence will be
-                            given in the order of team registration and proposal submission.
+                            Teams must register their team and submit an initial propostal via the Digital*U website's registration form by <b>January 1st, 2013</b>.
+                            The deadline for the final submission is <b>January 15th, 2013</b>.
+                            Further details submission of the final product will be sent to registered teams via email.
                         </p>
 
                         <p>
-                            A jury of independent peers and experts will give equal weight to the following five (5) criteria in selecting winning entries:
+                            Final submissions will be judged equally on originality, feasibility, potential impact, and benefit to UBC, and will involve the following components:
                             <ul>
                                 <li>
-                                    Originality of the mobile idea
+                                    a stand-up 10 minute presentation to a panel of judges
                                 </li>
                                 <li>
-                                    Feasibility of development
+                                    a tangible demonstration of your idea (prototype and/or detailed storyboard)
                                 </li>
                                 <li>
-                                    Breadth of audience &amp; impact
+                                    a 90-second promotional video
                                 </li>
                                 <li>
-                                    Potential for enhancing UBC
-                                </li>
-                                <li>
-                                    Excellence of storytelling
+                                    a 1,000 word (max) written submission
                                 </li>
                             </ul>
                         </p>
 
-                        <p>
-                            All submissions will become the exclusive property of UBC to display, distribute, develop and apply as it so chooses.
-                            Applicants will be invited to become beneficial participants in the further refinement and development of their ideas, should that take place.
-                            Applicants may optionally choose to develop their ideas as their own ventures in conjuntion with the UBC MAGIC Lab
-                            and/or within UBC programs such as entrepreneurship@UBC.
-                        </p>
+                        <div class="block">
+                            <h2 class="pixel">Judging Guidelines</h2>
+                            <p>
+                                The Digital*U Contest is open to all UBC campuses and communities, including students, alumni, staff, faculty, residents, departments, units, and facilities.
+                                A maximum of two (2) entries will be considered from any individual or group. When entries of a substantially similar nature are encountered, precedence will be
+                                given in the order of team registration and proposal submission.
+                            </p>
+
+                            <p>
+                                A jury of independent peers and experts will give equal weight to the following five (5) criteria in selecting winning entries:
+                                <ul>
+                                    <li>
+                                        Originality of the mobile idea
+                                    </li>
+                                    <li>
+                                        Feasibility of development
+                                    </li>
+                                    <li>
+                                        Breadth of audience &amp; impact
+                                    </li>
+                                    <li>
+                                        Potential for enhancing UBC
+                                    </li>
+                                    <li>
+                                        Excellence of storytelling
+                                    </li>
+                                </ul>
+                            </p>
+
+                            <p>
+                                All submissions will become the exclusive property of UBC to display, distribute, develop and apply as it so chooses.
+                                Applicants will be invited to become beneficial participants in the further refinement and development of their ideas, should that take place.
+                                Applicants may optionally choose to develop their ideas as their own ventures in conjuntion with the UBC MAGIC Lab
+                                and/or within UBC programs such as entrepreneurship@UBC.
+                            </p>
+                        </div>
 
                         <div class="block" style="display:none">
                             <h2 class="pixel">Judging Committee</h2>
@@ -216,6 +247,9 @@
                                     No -- this contest is open to any team with an idea.  See entry requirements for more specific details.
                                 </p>
                             </li>
+Disabled state
+Make buttons look unclickable by fading them back 50%.
+
 
                             <li>
                                 <h3>Do I have to be from UBC?</h3>
@@ -260,9 +294,18 @@
 
                     </li>
 
-                    <li id="register" style="display:none">
+                    <li id="register" style="display:block">
 
                         <h2 class="pixel">Get your ideas and team together!</h2>
+                        <p>
+                            Register your team using the form below by <b>January 1st, 2013</b>. Registered teams will receive details regarding their final submission, which will be due by <b>January 15th, 2013</b>, via the emails provided.
+                        </p>
+
+                        <p>
+                            The information you submit will be displayed in the submission gallery until the contest deadline, at which point your final
+                            submission (i.e. your 90-second promotional video, written submission, other media, etc.) will be shown instead. We
+                            encourage teams to register as early as possible so that they can stake out their idea!
+                        </p>
 
                         <div id="form-message-mobile">
                             <p>
@@ -270,14 +313,17 @@
                                 if you have any questions or concerns!
                             </p>
                         </div>
+                        
+                        <div class="divider"></div>
 
-                        <div class="row">
+                        <div class="row form-wrapper">
+                            <h2 class="pixel">Registration Form</h2>
                             <form id="registration-form" class="form-horizontal">
 
                                 <div class="control-group">
-                                    <label class="control-label" for="teamName">Project Title</label>
+                                    <label class="control-label" for="projectName">Project Title</label>
                                     <div class="controls">
-                                        <input type="text" id="teamName" placeholder="e.g. Team Awesome">
+                                        <input type="text" id="projectName" name="projectName" placeholder="Title">
                                     </div>
                                 </div>
 
@@ -305,9 +351,9 @@
                                     <label class="control-label" for="inputDescription">Project proposal</label>
 
                                     <div class="controls">
-                                        <textarea rows="3"></textarea>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
-                                    
- <span class="help-block">Submit a brief draft <b>(maximum 300 words)</b> of your idea. This will be published in the gallery of entries, so any changes you want to make after submitting the form will have to be done by emailing us at <a href="mailto:digitalu@magic.ubc.ca">digitalu@magic.ubc.ca</a>.</span>
+                                        <textarea id="inputDescription" rows="3"></textarea>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                                        
+ <span class="help-block">Submit a brief draft <b>(around 300 words)</b> of your idea. This will be published in the gallery of entries, so any changes you want to make after submitting the form will have to be done by emailing us at <a href="mailto:digitalu@magic.ubc.ca">digitalu@magic.ubc.ca</a>.</span>
                                     </div>
                                 </div>
 
@@ -315,9 +361,9 @@
                                     <label class="control-label" for="inputDescription">Questions or requests</label>
 
                                     <div class="controls">
-                                        <textarea rows="3"></textarea>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                                        <textarea rows="3"></textarea>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
                                     
- <span class="help-block">Let us know if you have any particular needs for your project.</span>
+ <span class="help-block"><b>(Optional)</b> Let us know if you have any particular needs for your project.</span>
                                     </div>
                                 </div>
 
@@ -336,11 +382,11 @@
 
                                     <div class="controls">
 
-                                        <button onclick="javascript:if(confirm('Are you sure you want to start over?')) { return true; } else return false;"type="reset" class="btn">
+                                        <button onclick="javascript:if(confirm('Are you sure you want to start over?')) { return true; } else return false;"type="reset" class="btn btn-large">
                                             Start Over
                                         </button>
-                                        <button type="submit" class="btn">
-                                            Submit
+                                        <button id="submit" type="submit" class="btn btn-large btn-success">
+                                            Submit <i class="icon-ok icon-white"></i>
                                         </button>
                                     </div>
                                 </div>
