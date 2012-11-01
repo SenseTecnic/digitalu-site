@@ -77,10 +77,9 @@ $("form").submit(function() {
 
 
 
-var form;
 
 function validateForm(form) {
-	form = form;
+	
 	
 	var isValid = true;
 	
@@ -88,12 +87,13 @@ function validateForm(form) {
 		alert("Please enter a project name");
 		isValid=false;
 	}
+	
 	if (!form["inputEmail-1"] || form["inputEmail-1"] == ""){
 		alert("Please enter at least one email address.");
 		isValid=false;
 	}
 	
-	if (!form.inputDescription){
+	if (!form.inputDescription || form.inputDescription == ""){
 		alert("Please enter a proposal description.");
 		isValid=false;
 	}
@@ -105,6 +105,10 @@ function validateForm(form) {
 	else return false;
 }
 
+/**
+ * Submits form via AJAX POST.
+ * @param formJSON
+ */
 function submitForm(formJSON) {	
 	
 	$.ajax({
@@ -121,12 +125,11 @@ function submitForm(formJSON) {
 				var successText = ['<h2 class="pixel">Thank you!</h2>',
 				                   '<p>Thanks for registering! You will receive an email ',
 				                   'explaining the next steps for your team within the next couple of days.',
-				                   '(If you don\'t receive an email, please contact us at ',
-				                   '<a href="mailto:digitalu@magic.ubc.ca">digitalu@magic.ubc.ca</a>.</p>)'].join('\n');
+				                   'If you don\'t receive an email, please contact us at ',
+				                   '<a href="mailto:digitalu@magic.ubc.ca">digitalu@magic.ubc.ca</a></p>'].join('\n');
 				
-				$('.form-wrapper').removeClass('row').html(successText);				
-			}
-			
+				$('.form-wrapper').removeClass('row').html(successText);		
+			}			
 			
 			else{
 				alert("Error: " + result.message);
@@ -135,6 +138,10 @@ function submitForm(formJSON) {
 	});
 }
 
+
+/**
+ * Serializes registration form into JSON object. 
+ */
 $.fn.serializeObject = function()
 {
     var o = {};
@@ -149,6 +156,9 @@ $.fn.serializeObject = function()
             o[this.name] = this.value || '';
         }
     });
+    
+    o["inputDescription"] = $('#inputDescription').val();
+    o["inputQuestions"] = $('#inputQuestions').val();    
     return o;
 };
 
@@ -169,13 +179,15 @@ function truncateText() {
 	if ($(window).width() < 500) {
 		$("#nav-register").find('a').text("Reg.");
 		$('#form-message-mobile').show();
-		$('#registration-form').hide();
+		$('.divider').hide();
+		$('.form-wrapper').hide();
 	}
 
 	else {
 		$("#nav-register").find('a').text("Register");
 		$('#form-message-mobile').hide();
-		$('#registration-form').show();
+		$('.divider').show();
+		$('.form-wrapper').show();
 	}
 }
 
