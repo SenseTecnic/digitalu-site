@@ -61,45 +61,61 @@ $("form").submit(function() {
 		alert("Please read the disclaimer before registering!");
 		toggleButtons(true);
 		return false;
-	}
-		
+	}	
 	
 	console.log(formJSON);
 	
 	if (validateForm(formJSON)){
 		submitForm(formJSON);
-	}	
+	}
+	else {
+		toggleButtons(true);
+	}
 	
 	return false;
 });
 
 
 
-
+var form;
 
 function validateForm(form) {
+	form = form;
+	
+	var isValid = true;
+	
 	if (!form.projectName){
-		alert("ERROR")
-		return false;
+		alert("Please enter a project name");
+		isValid=false;
+	}
+	if (!form["inputEmail-1"] || form["inputEmail-1"] == ""){
+		alert("Please enter at least one email address.");
+		isValid=false;
 	}
 	
-	return true;
+	if (!form.inputDescription){
+		alert("Please enter a proposal description.");
+		isValid=false;
+	}
+	
+	if (isValid)
+		return true;
+	
+	
+	else return false;
 }
 
 function submitForm(formJSON) {	
-
-	var formStr = JSON.stringify($('#registration-form').serializeObject());
 	
 	$.ajax({
 		type: 'POST',
 		url: "email_form.php",
-		data: formStr, 
+		data: formJSON, 
+		dataType: "json",
 		success: function(result){
-			
-			result = JSON.parse(result);
-			
+			console.log(result);
 			if (result.success == "true"){
-				console.log(result);x
+				
 				$('#registration-form').remove();
 			
 				var successText = ['<h2 class="pixel">Thank you!</h2>',
@@ -108,23 +124,16 @@ function submitForm(formJSON) {
 				                   '(If you don\'t receive an email, please contact us at ',
 				                   '<a href="mailto:digitalu@magic.ubc.ca">digitalu@magic.ubc.ca</a>.</p>)'].join('\n');
 				
-				$('.form-wrapper').removeClass('row').html(successText);
-				
+				$('.form-wrapper').removeClass('row').html(successText);				
 			}
+			
+			
 			else{
 				alert("Error: " + result.message);
 			}
 	    }
 	});
 }
-
-
-
-
-
-
-
-
 
 $.fn.serializeObject = function()
 {
