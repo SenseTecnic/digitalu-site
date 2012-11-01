@@ -247,9 +247,6 @@
                                     No -- this contest is open to any team with an idea.  See entry requirements for more specific details.
                                 </p>
                             </li>
-Disabled state
-Make buttons look unclickable by fading them back 50%.
-
 
                             <li>
                                 <h3>Do I have to be from UBC?</h3>
@@ -358,10 +355,10 @@ Make buttons look unclickable by fading them back 50%.
                                 </div>
 
                                 <div class="control-group">
-                                    <label class="control-label" for="inputDescription">Questions or requests</label>
+                                    <label class="control-label" for="inputQuestions">Questions or requests</label>
 
                                     <div class="controls">
-                                        <textarea rows="3"></textarea>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                                        <textarea name="inputQuestions" rows="3"></textarea>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
                                     
  <span class="help-block"><b>(Optional)</b> Let us know if you have any particular needs for your project.</span>
                                     </div>
@@ -370,7 +367,7 @@ Make buttons look unclickable by fading them back 50%.
                                 <div class="control-group">
                                     <div class="controls">
                                         <label class="checkbox" id="disclaimer">
-                                            <input type="checkbox">
+                                            <input name="disclaimerBox" type="checkbox">
                                             All team members have read and agree to all of the contest rules and regulations.
                                             We are aware that the Digital*U contest is only open to those affiliated with UBC in some way,
                                             and teams containing individuals not associated with UBC will be disqualified
@@ -382,7 +379,7 @@ Make buttons look unclickable by fading them back 50%.
 
                                     <div class="controls">
 
-                                        <button onclick="javascript:if(confirm('Are you sure you want to start over?')) { return true; } else return false;"type="reset" class="btn btn-large">
+                                        <button onclick="javascript:if(confirm('Are you sure you want to start over?')) { return true; } else return false;"type="reset" id="reset" class="btn btn-large">
                                             Start Over
                                         </button>
                                         <button id="submit" type="submit" class="btn btn-large btn-success">

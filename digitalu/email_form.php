@@ -1,17 +1,15 @@
 <?php
 
-
-	$teamName=$_POST['teamName'];
 	$to='sara.bainbridge@gmail.com';
 	$subject='[REG]';
 	$message='hello';
-	$headers='From: webmaster@example.com'."\r\n".'Reply-To: webmaster@example.com'."\r\n".'X-Mailer: PHP/'.phpversion();
+	$headers='From: sara.bainbridge@gmail.com'."\r\n".'Reply-To: sara.bainbridge@gmail.com'."\r\n".'X-Mailer: PHP/'.phpversion();
 	
 	
-	mail($to,$subject,$message,$headers);
+	$mailResp = mail($to,$subject,$message,$headers);
 	
 	
 	
-	$success=array('success'=> 'true','message'=>'Successful!');
+	$success=array('success'=> 'true','message'=>'Successful!', 'mailResp' => $mailResp);
 	echo json_encode($success);
 ?>

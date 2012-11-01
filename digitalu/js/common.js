@@ -34,25 +34,60 @@ $('#add-member').live(
 			return false;
 		});
 
-function validateForm() {
+
+
+function toggleButtons( enabled ){
 	
-	var projectName = $('#projectName').val();
+	if (enabled){
+		$('#submit').html('Submit <i class="icon-ok icon-white"></i>')
+		$('#submit').removeAttr('disabled');
+		$('#reset').removeAttr('disabled');
+	}	
+	else{
+		$('#submit').html("Submitting...")
+		$('#submit').attr('disabled','disabled');
+		$('#reset').attr('disabled','disabled');
+		
+	}
+}
+
+$("form").submit(function() {
 	
-	if (!projectName){
-		alert("ERROR")
+	var formJSON = $('#registration-form').serializeObject();
+	
+	toggleButtons(false);
+	
+	if (formJSON.disclaimerBox != "on"){
+		alert("Please read the disclaimer before registering!");
+		toggleButtons(true);
 		return false;
 	}
 		
 	
+	console.log(formJSON);
 	
+	if (validateForm(formJSON)){
+		submitForm(formJSON);
+	}	
+	
+	return false;
+});
+
+
+
+
+
+function validateForm(form) {
+	if (!form.projectName){
+		alert("ERROR")
+		return false;
+	}
 	
 	return true;
 }
 
-var aresult;
+function submitForm(formJSON) {	
 
-function submitForm() {
-	
 	var formStr = JSON.stringify($('#registration-form').serializeObject());
 	
 	$.ajax({
@@ -64,22 +99,32 @@ function submitForm() {
 			result = JSON.parse(result);
 			
 			if (result.success == "true"){
+				console.log(result);x
 				$('#registration-form').remove();
 			
 				var successText = ['<h2 class="pixel">Thank you!</h2>',
 				                   '<p>Thanks for registering! You will receive an email ',
 				                   'explaining the next steps for your team within the next couple of days.',
 				                   '(If you don\'t receive an email, please contact us at ',
-				                   '<a href="mailto:digitalu@magic.ubc.ca">digitalu@magic.ubc.ca</a>.</p>'].join('\n');
+				                   '<a href="mailto:digitalu@magic.ubc.ca">digitalu@magic.ubc.ca</a>.</p>)'].join('\n');
 				
 				$('.form-wrapper').removeClass('row').html(successText);
+				
 			}
-			else alert("NO")
+			else{
+				alert("Error: " + result.message);
+			}
 	    }
 	});
-	
-	
 }
+
+
+
+
+
+
+
+
 
 $.fn.serializeObject = function()
 {
@@ -98,15 +143,6 @@ $.fn.serializeObject = function()
     return o;
 };
 
-
-$("form").submit(function() {
-	
-	if (validateForm()){
-		submitForm();
-	}	
-	
-	return false;
-});
 
 $('.nav-link').live('click', function() {
 
