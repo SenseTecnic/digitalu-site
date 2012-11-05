@@ -172,6 +172,7 @@ function truncateText() {
 	
 	if ($(window).width() < 500) {
 		$("#nav-register").find('a').text("Reg.");
+		$("#nav-how").find('a').text("View");
 		$('#form-message-mobile').show();
 		$('.divider').hide();
 		$('.form-wrapper').hide();
@@ -180,6 +181,8 @@ function truncateText() {
 
 	else {
 		$("#nav-register").find('a').text("Register");
+		$("#nav-how").find('a').text("Gallery");
+
 		$('#form-message-mobile').hide();
 		$('.divider').show();
 		$('.form-wrapper').show();
