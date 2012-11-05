@@ -34,134 +34,127 @@ $('#add-member').live(
 			return false;
 		});
 
+function toggleButtons(enabled) {
 
-
-function toggleButtons( enabled ){
-	
-	if (enabled){
+	if (enabled) {
 		$('#submit').html('Submit <i class="icon-ok icon-white"></i>')
 		$('#submit').removeAttr('disabled');
 		$('#reset').removeAttr('disabled');
-	}	
-	else{
+	} else {
 		$('#submit').html("Submitting...")
-		$('#submit').attr('disabled','disabled');
-		$('#reset').attr('disabled','disabled');
-		
+		$('#submit').attr('disabled', 'disabled');
+		$('#reset').attr('disabled', 'disabled');
+
 	}
 }
 
 $("form").submit(function() {
-	
+
 	var formJSON = $('#registration-form').serializeObject();
-	
+
 	toggleButtons(false);
-	
-	if (formJSON.disclaimerBox != "on"){
+
+	if (formJSON.disclaimerBox != "on") {
 		alert("Please read the disclaimer before registering!");
 		toggleButtons(true);
 		return false;
-	}	
-	
-	console.log(formJSON);
-	
-	if (validateForm(formJSON)){
-		submitForm(formJSON);
 	}
-	else {
+
+	console.log(formJSON);
+
+	if (validateForm(formJSON)) {
+		submitForm(formJSON);
+	} else {
 		toggleButtons(true);
 	}
-	
+
 	return false;
 });
 
-
-
-
 function validateForm(form) {
-	
-	
+
 	var isValid = true;
-	
-	if (!form.projectName){
+
+	if (!form.projectName) {
 		alert("Please enter a project name");
-		isValid=false;
+		isValid = false;
 	}
-	
-	if (!form["inputEmail-1"] || form["inputEmail-1"] == ""){
+
+	if (!form["inputEmail-1"] || form["inputEmail-1"] == "") {
 		alert("Please enter at least one email address.");
-		isValid=false;
+		isValid = false;
 	}
-	
-	if (!form.inputDescription || form.inputDescription == ""){
+
+	if (!form.inputDescription || form.inputDescription == "") {
 		alert("Please enter a proposal description.");
-		isValid=false;
+		isValid = false;
 	}
-	
+
 	if (isValid)
 		return true;
-	
-	
-	else return false;
+
+	else
+		return false;
 }
 
 /**
  * Submits form via AJAX POST.
+ * 
  * @param formJSON
  */
-function submitForm(formJSON) {	
-	
-	$.ajax({
-		type: 'POST',
-		url: "email_form.php",
-		data: formJSON, 
-		dataType: "json",
-		success: function(result){
-			console.log(result);
-			if (result.success == "true"){
-				
-				$('#registration-form').remove();
-			
-				var successText = ['<h2 class="pixel">Thank you!</h2>',
-				                   '<p>Thanks for registering! You will receive an email ',
-				                   'explaining the next steps for your team within the next couple of days.',
-				                   'If you don\'t receive an email, please contact us at ',
-				                   '<a href="mailto:digitalu@magic.ubc.ca">digitalu@magic.ubc.ca</a></p>'].join('\n');
-				
-				$('.form-wrapper').removeClass('row').html(successText);		
-			}			
-			
-			else{
-				alert("Error: " + result.message);
-			}
-	    }
-	});
+function submitForm(formJSON) {
+
+	$
+			.ajax({
+				type : 'POST',
+				url : "email_form.php",
+				data : formJSON,
+				dataType : "json",
+				success : function(result) {
+					console.log(result);
+					if (result.success == "true") {
+
+						$('#registration-form').remove();
+
+						var successText = [
+								'<h2 class="pixel">Thank you!</h2>',
+								'<p>Thanks for registering! You will receive an email ',
+								'explaining the next steps for your team within the next couple of days.',
+								'If you don\'t receive an email, please contact us at ',
+								'<a href="mailto:digitalu@magic.ubc.ca">digitalu@magic.ubc.ca</a></p>' ]
+								.join('\n');
+
+						$('.form-wrapper').removeClass('row').html(successText);
+					}
+
+					else {
+						alert("Error: " + result.message);
+					}
+				}
+			});
 }
 
-
 /**
- * Serializes registration form into JSON object. 
+ * Serializes registration form into JSON object.
  */
-$.fn.serializeObject = function()
-{
-    var o = {};
-    var a = this.serializeArray();
-    $.each(a, function() {
-        if (o[this.name] !== undefined) {
-            if (!o[this.name].push) {
-                o[this.name] = [o[this.name]];
-            }
-            o[this.name].push(this.value || '');
-        } else {
-            o[this.name] = this.value || '';
-        }
-    });
-    
-    o["inputDescription"] = $('#inputDescription').val();
-    o["inputQuestions"] = $('#inputQuestions').val();    
-    return o;
-};
+$.fn.serializeObject = function() {
+	var o = {};
+	var a = this.serializeArray();
+	$.each(a, function() {
+		if (o[this.name] !== undefined) {
+			if (!o[this.name].push) {
+				o[this.name] = [ o[this.name] ];
+			}
+			o[this.name].push(this.value || '');
+		} else {
+			o[this.name] = this.value || '';
+		}
+	});
 
+	o["inputDescription"] = $('#inputDescription').val();
+	o["inputQuestions"] = $('#inputQuestions').val();
+	return o;
+};
 
 $('.nav-link').live('click', function() {
 
@@ -176,11 +169,14 @@ $('.nav-link').live('click', function() {
 });
 
 function truncateText() {
+	
 	if ($(window).width() < 500) {
 		$("#nav-register").find('a').text("Reg.");
 		$('#form-message-mobile').show();
 		$('.divider').hide();
 		$('.form-wrapper').hide();
+		$('.social-logos').hide();
+		$('#social-logos-big-wrapper').show();
 	}
 
 	else {
@@ -188,6 +184,8 @@ function truncateText() {
 		$('#form-message-mobile').hide();
 		$('.divider').show();
 		$('.form-wrapper').show();
+		$('.social-logos').show();
+		$('#social-logos-big-wrapper').hide();
 	}
 }
 
