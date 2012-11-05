@@ -176,7 +176,6 @@ function truncateText() {
 		$('.divider').hide();
 		$('.form-wrapper').hide();
 		$('.social-logos').hide();
-		$('#social-logos-big-wrapper').show();
 	}
 
 	else {
@@ -185,7 +184,6 @@ function truncateText() {
 		$('.divider').show();
 		$('.form-wrapper').show();
 		$('.social-logos').show();
-		$('#social-logos-big-wrapper').hide();
 	}
 }
 

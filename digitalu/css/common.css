@@ -108,6 +108,44 @@ h1, h2, h3 {
 		font-size: 20px;
 		line-height: 20px;
 	}
+	
+	ul.judges-ul{
+		margin-left: 0 !important;
+	}
+
+	ul.judges-ul li img {
+		float: left;
+		margin-right: 10px;
+	}
+	
+	.judge-block img {
+		height: 80px;
+		width: 80px;
+		border-radius: 40px;
+		-moz-border-radius: 40px;
+	}	
+	
+
+	ul.judges-ul li .judge-info, ul.judges-ul li .judge-info h2 {
+		text-align: left !important;
+	}
+
+
+	.judge-info {
+		margin-top: 20px;
+		height: 100px;
+		font-size: 0.9em;
+		padding-top: 5px;
+		margin-left: 90px;
+	}
+
+	.judge-info h2 {
+		font-family: 'SilkscreenNormal', 'DroidSansRegular', Helvetica, Arial, sans-serif;
+		margin: 0;
+		padding: 0;
+		font-size: 1em;
+		line-height: 1em;
+	}
 
 }
 
@@ -174,6 +212,45 @@ h1, h2, h3 {
 		line-height: 30px;
 	}
 
+	ul.judges-ul li:nth-child(odd) img {
+		float: left;
+		margin-right: 20px;
+	}
+
+	ul.judges-ul li:nth-child(even) img {
+		float: right;
+		margin-left: 20px;
+	}
+
+	ul.judges-ul li:nth-child(odd) .judge-info, ul.judges-ul li:nth-child(odd) .judge-info h2 {
+		text-align: left !important;
+	}
+
+	ul.judges-ul li:nth-child(even) .judge-info, ul.judges-ul li:nth-child(even) .judge-info h2 {
+		text-align: right !important;
+	}
+	
+	.judge-block img {
+		height: 120px;
+		width: 120px;
+		border-radius: 60px;
+		-moz-border-radius: 60px;
+	}
+
+	.judge-info {
+		margin-top: 30px;
+		height: 100px;
+		padding-top: 30px;
+	}
+
+	.judge-info h2 {
+		font-family: 'SilkscreenNormal', 'DroidSansRegular', Helvetica, Arial, sans-serif;
+		margin: 0;
+		padding: 0;
+		font-size: 1.2em;
+		line-height: 1.2em;
+	}
+
 }
 
 /* NAVBAR */
@@ -233,44 +310,16 @@ h3.subtitle {
 	list-style-type: none;
 }
 
-.judges-ul{
+.judges-ul {
 	list-style-type: none;
 }
-
-ul.judges-ul li:nth-child(odd) img{
-	float: left;
-	margin-right: 20px;
-
-} 
-
-ul.judges-ul li:nth-child(even) img{
-	float: right;
-	margin-left: 20px;
-} 
-
-ul.judges-ul li:nth-child(even) .judge-info{
-	text-align: right;
-}
-
-.judge-block img{
-	height: 120px;
-	width: 120px;
-	border-radius: 60px;
-	-moz-border-radius: 60px;
-	}
-
-.judge-info{
-	height: 160px;
-}
-
-
 
 /* REGISTRATION FORM */
 #registration-form {
 	margin: 5%;
 }
 
-#registration-form .control-group, .member-group-wrapper{
+#registration-form .control-group, .member-group-wrapper {
 	padding: 15px 0;
 }
 
@@ -291,8 +340,8 @@ ul.judges-ul li:nth-child(even) .judge-info{
 	border-radius: 0px !important;
 	-webkit-border-radius: 0px !important;
 	height: 30px !important;
-	font-size: 1.2em  !important;
-	line-height: 1.2em  !important;	
+	font-size: 1.2em !important;
+	line-height: 1.2em !important;
 }
 
 #registration-form input#projectName {
@@ -313,17 +362,16 @@ ul.judges-ul li:nth-child(even) .judge-info{
 	font-size: 1em;
 }
 
-
-#registration-form .member-name-wrapper{
+#registration-form .member-name-wrapper {
 	padding-right: 10px;
 }
-#registration-form .member-name-wrapper, #registration-form .member-email-wrapper{
+#registration-form .member-name-wrapper, #registration-form .member-email-wrapper {
 	display: inline;
 	width: 50%;
-	float:left;
+	float: left;
 }
 
-.member-group{
+.member-group {
 	margin: 5px !important;
 }
 
@@ -348,34 +396,32 @@ input:-moz-placeholder {
 
 #registration-form .help-block, #registration-form .help-block a {
 	color: rgba(255, 255, 255, 0.7);
-	font-size: 0.9em;	
+	font-size: 0.9em;
 }
 
 #registration-form textarea, #registration-form input#teamName {
 	width: 100%;
 }
 
-#registration-form #add-member a{	
+#registration-form #add-member a {
 	color: rgba(255, 255, 255, 0.7);
 }
 
-#registration-form #add-member a:hover{	
+#registration-form #add-member a:hover {
 	color: rgba(255, 255, 255, 1);
 	text-decoration: none;
 }
 
-#inputDescription{
+#inputDescription {
 	padding-bottom: 20px;
 	position: relative;
 }
-
 
 #registration-form #add-member {
 	float: right;
 	font-family: 'SilkscreenNormal', 'DroidSansRegular', Helvetica, Arial, sans-serif;
 	margin-top: -25px;
 }
-
 
 #registration-form #disclaimer {
 	font-family: 'DroidSansRegular', Helvetica, Arial, sans-serif;
@@ -385,29 +431,27 @@ input:-moz-placeholder {
 }
 
 #counter {
-	float:right;
+	float: right;
 	color: #CCC;
 	margin-top: -10px;
 	position: absolute;
 	bottom: 5px;
 	right: 5px;
-	
 }
 
-.form-buttons{
+.form-buttons {
 	text-align: right;
 }
-.form-buttons button{
+.form-buttons button {
 	margin: 5px;
 	font-weight: bold;
 }
 
-.divider{
+.divider {
 	height: 1px;
 	background-color: rgba(255, 255, 255, 0.3);
 	margin: 50px 0;
 }
-
 
 /* FAQ */
 ul#faq-ul {
@@ -436,50 +480,41 @@ ul#faq-ul {
 	font-size: 1.2em;
 }
 
-
-.social-logos{
-	position: absolute;
+.social-logos {
+	position: fixed;
 	top: 5px;
 	right: 5px;
 }
 
-.social-logos img{
+.social-logos img {
 	height: 60px;
 	width: 60px;
 	opacity: 0.4;
-	display: block;	
-	
+	display: block;
 }
 
-.social-logos img:hover{
-	opacity: 0.7;	
+.social-logos img:hover {
+	opacity: 0.7;
 }
-#social-logos-big-wrapper{
-}
-
-#social-logos-big-wrapper a{
-	text-decoration: none;	
+#social-logos-big-wrapper {
 }
 
-.social-logo-big{
+#social-logos-big-wrapper a {
+	text-decoration: none;
+}
+
+.social-logo-big {
 	font-size: 1.4em;
 	opacity: 0.85;
 }
 
-
-.social-logo-big:hover{
-	opacity: 1;	
+.social-logo-big:hover {
+	opacity: 1;
 }
 
-
-.social-logo-big img{
+.social-logo-big img {
 	height: 60px;
 	width: 60px;
 	padding: 5px;
 }
-
-
-
-
-
 
