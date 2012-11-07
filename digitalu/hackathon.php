@@ -70,8 +70,8 @@
 
                         <a href="https://www.facebook.com/events/246359098826377/">
                         <div class="social-logo-big pixel centered block">
-                            <img src="img/facebook.png">
-                            <h2>RSVP on Facebook!</h
+                            <img src="img/facebook.png" style="padding: 0px">
+                            <h2 style="margin: 5px">RSVP on Facebook!</h
                         </div> </a>
 
                     </li>
