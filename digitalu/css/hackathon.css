@@ -1,0 +1,49 @@
+@import url("common.css");
+
+@media (max-width: 779px) {
+
+	body {
+		background: black url("../img/nebula_tile_blue.jpg");
+	}
+	
+	h1.title {
+		color: rgba(255, 255, 255, 0.95) !important;
+		margin: 5px 0;
+	}
+
+	h2.subtitle {
+		padding: 25px 0 0 0;
+		font-size: 15px;
+		line-height: 20px;
+		color: rgba(255, 255, 255, 0.75) !important;
+		margin: 0;
+	}
+
+}
+
+@media (min-width: 780px) {
+	
+	#heading-title{
+		
+		padding: 5px 0 15px 0;
+		
+	}
+	
+	#heading-subtitle{
+		padding: 10px;
+		color: rgba(255, 255, 255, 0.75) !important;
+	}
+	
+	
+	body {
+		background: black url("../img/nebula_blue.jpg") no-repeat top center fixed;
+	}
+}
+
+
+.nav ul li {
+	display: inline-block;
+	font-family: 'SilkscreenNormal';
+	width: 23%;
+}
+
