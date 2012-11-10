@@ -20,12 +20,11 @@ a, a:active, a:visited {
 }
 
 a:hover {
-	text-decoration:none;
+	text-decoration: none;
 	color: white;
 }
 
-
-.centered{
+.centered {
 	text-align: center;
 }
 
@@ -106,15 +105,15 @@ h1, h2, h3 {
 		padding-top: 10px;
 	}
 
-	#it-logo {
+	.sponsor-logos {
 		display: none;
 	}
 	h3 {
 		font-size: 20px;
 		line-height: 20px;
 	}
-	
-	ul.judges-ul{
+
+	ul.judges-ul {
 		margin-left: 0 !important;
 	}
 
@@ -122,19 +121,17 @@ h1, h2, h3 {
 		float: left;
 		margin-right: 10px;
 	}
-	
+
 	.judge-block img {
 		height: 80px;
 		width: 80px;
 		border-radius: 40px;
 		-moz-border-radius: 40px;
-	}	
-	
+	}
 
 	ul.judges-ul li .judge-info, ul.judges-ul li .judge-info h2 {
 		text-align: left !important;
 	}
-
 
 	.judge-info {
 		margin-top: 20px;
@@ -201,15 +198,28 @@ h1, h2, h3 {
 		line-height: 28px;
 	}
 
-	#it-logo {
+	.sponsor-logos {
 		position: fixed;
 		bottom: 10px;
 		right: 10px;
-		opacity: 0.5;
 		z-index: 1;
+		text-align: right;
 	}
 
-	#it-logo:hover {
+	.sponsor-logos img {
+		opacity: 0.5;
+	}
+	
+	#magic-logo{
+		height: 30px;
+	}
+	
+	#wavefront-logo{
+		height: 20px;
+		margin-bottom: 5px;
+	}
+
+	.sponsor-logos img:hover {
 		opacity: 0.7;
 	}
 
@@ -234,7 +244,7 @@ h1, h2, h3 {
 	ul.judges-ul li:nth-child(even) .judge-info, ul.judges-ul li:nth-child(even) .judge-info h2 {
 		text-align: right !important;
 	}
-	
+
 	.judge-block img {
 		height: 120px;
 		width: 120px;
