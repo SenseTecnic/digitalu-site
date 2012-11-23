@@ -2,10 +2,15 @@
 
 
 
-	$to='sara.bainbridge@gmail.com';
+	$to='digitalu@magic.ubc.ca, sara.bainbridge@gmail.com';
 	$subject='[REG] '.$_POST['projectName'];
-	$message=$_POST['projectName'];
-	$headers='From: sara.bainbridge@gmail.com'."\r\n".'Reply-To: sara.bainbridge@gmail.com'."\r\n".'X-Mailer: PHP/'.phpversion();	
+	$message = "";
+	
+	foreach($_POST as $key=>$value) {
+		$message = $message . $key . ": ". $value . "\n";
+	}
+	
+	$headers='From: digitalu@magic.ubc.ca'."\r\n".'Reply-To: digitalu@magic.ubc.ca'."\r\n".'X-Mailer: PHP/'.phpversion();	
 	
 	$mailResp = mail($to,$subject,$message,$headers);
 	

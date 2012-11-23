@@ -187,7 +187,13 @@
                 </ul>
             </div>
 
-            <a href="http://www.it.ubc.ca/"><img src="img/it_logo.png" id="it-logo"/></a>
+            <div class="sponsor-logos">
+                <a href="http://www.wavefrontac.com/"><img src="img/wavefront_logo.png" id="wavefront-logo"/></a>
+                <br />
+                <a href="http://www.it.ubc.ca/"><img src="img/it_logo.png" id="it-logo"/></a>
+                <br />
+                <a href="http://magic.ubc.ca/"><img src="img/MAGIClogo.png" id="magic-logo"/></a>
+            </div>
             <div class="social-logos" style="display:none">
 
                 <a href="https://www.facebook.com/ubcdigitalu"><img src="img/facebook.png" id="fb-logo"/></a>

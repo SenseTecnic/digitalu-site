@@ -1,3 +1,22 @@
+<?php
+
+$link = mysql_connect('localhost', 'digitalu', 'm@g1c');
+
+if (!$link) {
+	die('Could not connect: ' . mysql_error());
+}
+
+$db = mysql_select_db('digitalu', $link);
+
+if (!$db) {
+	die('Can\'t use db : ' . mysql_error());
+}
+
+$query = "SELECT submission.title, submission.concept, submission.abstract, submission.s_id, " . "GROUP_CONCAT(user.name) " . "FROM submission " . "INNER JOIN submission_user ON submission_user.s_id = submission.s_id " . "INNER JOIN user ON submission_user.u_id = user.u_id " . "GROUP BY submission.s_id";
+$result = mysql_query($query) or die(mysql_error());
+mysql_close($link);
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -90,10 +109,20 @@
                     </li>
 
                     <li id="how" style="display:none">
-                        <h2 class="pixel secondary">Submission Gallery</h2>
-                        <p>
-                            Come back later and check out the contest entries!
-                        </p>
+                        <h2>Submissions</h2>
+                        <ul class="gallery-ul content-ul">
+                            <?php
+							while ($row = mysql_fetch_array($result)) {
+								$names = str_replace(",", ", ", $row['GROUP_CONCAT(user.name)']);
+								echo "<li><h3 class='pixel gallery-title'>" . $row['title'] . "</h3>";
+								echo "<span class='gallery-names'><i class='icon-user icon-white'></i> " . $names . "</span>";								
+								echo "<div class='gallery-concept'>".$row['concept']."</div>";
+								if ($row['abstract'])
+									echo "<div><span class='gallery-read-more pixel'>+ Read more</span><div class='gallery-abstract'>" . $row['abstract'] . "</div></div>";
+								echo "</li>";
+							}
+                            ?>
+                        </ul>
                     </li>
 
                     <li id="rules" style="display:none">
@@ -364,7 +393,7 @@
                                     <label class="control-label" for="inputDescription">Project proposal</label>
 
                                     <div class="controls">
-                                        <textarea id="inputDescription" rows="3"></textarea>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                                        <textarea id="inputDescription" rows="3"></textarea>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
                                         
  <span class="help-block">Submit a brief draft <b>(around 300 words)</b> of your idea. This will be published in the gallery of entries, so any changes you want to make after submitting the form will have to be done by emailing us at <a href="mailto:digitalu@magic.ubc.ca">digitalu@magic.ubc.ca</a>.</span>
                                     </div>
@@ -374,7 +403,7 @@
                                     <label class="control-label" for="inputQuestions">Questions or requests</label>
 
                                     <div class="controls">
-                                        <textarea id="inputQuestions" name="inputQuestions" rows="3"></textarea>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                                        <textarea id="inputQuestions" name="inputQuestions" rows="3"></textarea>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
                                     
  <span class="help-block"><b>(Optional)</b> Let us know if you have any particular needs for your project.</span>
                                     </div>

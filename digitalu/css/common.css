@@ -50,6 +50,18 @@ h1, h2, h3 {
 	font-family: 'SilkscreenNormal';
 }
 
+.gallery-title{
+	text-align: left;
+}
+.gallery-read-more{
+	cursor:pointer;
+}
+
+.gallery-abstract{
+	display:hidden;
+}
+
+
 /* ---------------------------------- */
 /* MOBILE							  */
 /* ---------------------------------- */
@@ -532,4 +544,36 @@ ul#faq-ul {
 	width: 60px;
 	padding: 5px;
 }
+
+.gallery-title{
+	margin: 0;
+	padding: 0;
+	line-height: 28px;
+}
+.gallery-ul li{
+	border-top: solid 1px rgba(255, 255, 255, 0.3);
+	padding: 25px 0 25px 0;
+}
+
+.gallery-names{
+	display: inline-block;
+	text-transform: capitalize;
+	margin-bottom: 15px;	
+}
+
+.gallery-names i{
+	height: 1em;
+	vertical-align:text-bottom;
+	margin-right: 2px;
+}
+
+.gallery-concept, .gallery-abstract, .gallery-read-more {
+	
+	padding-left: 45px;
+}
+
+.gallery-abstract{
+	display:none;
+}
+
 

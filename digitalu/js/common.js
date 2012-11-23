@@ -197,3 +197,13 @@ function truncateText() {
 $(window).resize(function() {
 	truncateText();
 });
+
+
+$(".gallery-read-more").live('click', function(){
+	$(this).siblings('.gallery-abstract').toggle();
+	console.log( $(this).closest('.gallery-abstract') );
+});
+
+
+
+

@@ -5,16 +5,14 @@ $link = mysql_connect('localhost', 'root', 'aMUSEment2');
 if (!$link) {
 	die('Could not connect: ' . mysql_error());
 }
-echo 'Connected successfully';
 
 $db = mysql_select_db('digitalu', $link);
 
 if (!$db) {
-	die('Can\'t use foo : ' . mysql_error());
+	die('Can\'t use db : ' . mysql_error());
 }
 
-$query = "SELECT * FROM submission, submission_user, user " . "WHERE submission.s_id = submission_user.s_id " . "AND submission_user.u_id = user.u_id";
-
+$query = "SELECT submission.title, submission.abstract, submission.s_id, " . "GROUP_CONCAT(user.name) " . "FROM submission " . "INNER JOIN submission_user ON submission_user.s_id = submission.s_id " . "INNER JOIN user ON submission_user.u_id = user.u_id " . "GROUP BY submission.s_id";
 $result = mysql_query($query) or die(mysql_error());
 mysql_close($link);
 ?>
@@ -25,9 +23,7 @@ mysql_close($link);
         <title>UBC Digital*U</title>
 
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <meta name="HandheldFriendly" content="true" />FROM x
-LEFT JOIN b ON (b.b_id = x.b_id)
-WHERE (x.a_id = 'whatever')
+        <meta name="HandheldFriendly" content="true" />
 
         <meta name="viewport" content="width=device-width, height=device-height, user-scalable=yes">
 
@@ -52,7 +48,7 @@ WHERE (x.a_id = 'whatever')
                         <a class="nav-link" href="#">What</a>
                     </li>
                     <li id="nav-how">
-                        <a class="nav-link" href="#" >Entries</a>
+                        <a class="nav-link active" href="#" >Entries</a>
                     </li>
                     <li id="nav-rules">
                         <a class="nav-link" href="#">Rules</a>
@@ -69,12 +65,15 @@ WHERE (x.a_id = 'whatever')
             </div>
 
             <div class="content">
-                <ul class="content-ul">
+                <h2>Submissions</h2>
+                <ul class="gallery-ul content-ul">
                     <?php
 					while ($row = mysql_fetch_array($result)) {
-						echo $row['title'] . " - " . $row['abstract'];
-						echo "<br />";
-						echo $row['name'] . ", " . $row['email'];
+						$names = str_replace(",", ", ", $row['GROUP_CONCAT(user.name)']);
+						echo "<li><h3 class='pixel gallery-title'>" . $row['title'] . "</h3>";
+						echo "<span class='gallery-names'>Submitted by " . $names . "</span>";
+						echo "<br/><div class='gallery-abstract'>" . $row['abstract'] . "</div>";
+						echo "</li>";
 					}
                     ?>
                 </ul>
